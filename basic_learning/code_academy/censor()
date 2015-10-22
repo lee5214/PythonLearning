@@ -1,0 +1,7 @@
+def censor(text,word):
+    arr=text.split(' ')
+    for n in range(0,len(arr)):
+        if arr[n]==word:
+            arr[n]='*'*len(arr[n])
+    return " ".join(arr)
+censor("this hack is wack hack", "hack") 
