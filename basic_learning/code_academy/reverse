@@ -1,0 +1,11 @@
+def reverse(text):
+    arr=[]
+    st=[]
+    for w in text:
+        arr.append(w)
+    counter = 0
+    for s in arr:
+        st.append(arr[len(arr)-1-counter])
+        counter +=1
+    return "".join(st)
+print reverse('!Python')
