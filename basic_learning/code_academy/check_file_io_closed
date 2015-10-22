@@ -1,0 +1,5 @@
+with open("text.txt","w") as textfile:
+    textfile.write("fuckkkkk")
+if textfile.closed==False:
+    textfile.close()
+print textfile.closed
