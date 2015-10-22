@@ -1,0 +1,8 @@
+def median(li):
+    li=sorted(li)
+    if len(li)%2==0:
+        return (li[len(li)/2-1]+li[len(li)/2])/2.0
+    else:
+        return li[len(li)/2]
+        
+print median([2,3,1,5,3,6,7,3])
