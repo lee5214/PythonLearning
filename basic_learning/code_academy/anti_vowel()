@@ -1,0 +1,12 @@
+vow="aeiouAEIOU"
+def anti_vowel(text):
+    string=[]
+    for w in text:
+        if w not in vow:
+            string.append(w)
+    print ''.join(string)
+    return ''.join(string)    
+anti_vowel("Hey look Words!")
+'''
+Hy lk Wrds!
+'''
