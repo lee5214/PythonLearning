@@ -1,0 +1,11 @@
+def formula(input):
+	f1=input*100
+	f2=input*10
+	f3=input*1
+	return(f1,f2,f3)
+a1,a2,a3=formula(1)
+print "here's %d,%d,%d"%(a1,a2,a3)
+
+'''
+here's 100,10,1
+'''
