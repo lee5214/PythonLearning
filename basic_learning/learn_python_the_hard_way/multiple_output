@@ -4,8 +4,10 @@ def formula(input):
 	f3=input*1
 	return(f1,f2,f3)
 a1,a2,a3=formula(1)
-print "here's %d,%d,%d"%(a1,a2,a3)
+print "here's %d,%d,%d" %(a1,a2,a3)
+print "here's %d,%d,%d" %formula(100)
 
 '''
 here's 100,10,1
+here's 10000,1000,100
 '''
