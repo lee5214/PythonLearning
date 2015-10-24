@@ -1,0 +1,44 @@
+ seek():移动文件读取指针到指定位置
+
+tell():返回文件读取指针的位置
+
+seek()的三种模式：
+
+    （1）f.seek(p,0)  移动当文件第p个字节处，绝对位置
+
+    （2）f.seek(p,1)  移动到相对于当前位置之后的p个字节
+
+    （3）f.seek(p,2)  移动到相对文章尾之后的p个字节
+
+code:
+
+        f = open('d:/hello.txt','w') 
+        f.write('hello my friend python!\nsecond line.')
+
+        f = open('d:\hello.txt','r') 
+        （1）print(f.readlines())   #result:  ['hello my friend python!\n', 'second line.'],f.tell()=37  文件读到的位置
+
+        （2）print(f.readline())       #result:  
+               print 'f.tell(): ',f.tell()  
+
+               print(f.readline())        
+               print 'f.tell(): ',f.tell()  
+
+          #result:
+
+               hello my friend python!
+
+               f.tell():  25
+               second line.
+               f.tell():  37
+
+         (3)print(f.read())
+             print 'f.tell(): ',f.tell()
+
+             #result
+
+                 hello my friend python!
+                 second line.
+                 f.tell():  37
+
+ 
