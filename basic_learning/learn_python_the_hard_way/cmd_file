@@ -1,0 +1,4 @@
+echo "This is a test file." > test.txt
+echo ""> newFile.txt //create new file with string "xxx"
+
+cat test.txt//show data in file
