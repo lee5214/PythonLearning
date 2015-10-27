@@ -34,9 +34,13 @@ class Student(Person):
 
     __slots__ = ('score')
 
-    def __init__(self,name,gender,score):
-        #Person.__init__('name','gender')
-        self.score=score
+
+
+    def __init__(self, name, gender, score):
+
+        super(Person,self).__init__()
+
+        self.score = score
 
 s = Student('Bob', 'male', 59)
 s.name = 'Tim'
