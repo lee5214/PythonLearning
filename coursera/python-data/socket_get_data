@@ -1,0 +1,10 @@
+import socket
+mysocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+mysocket.connect(('www.lee5214.com',80))
+mysocket.send('GET http://www.lee5214.com HTTP/1.0\n\n')
+while 1:
+    data = mysocket.recv(1024)
+    if(len(data)<1):
+        break
+    print data
+mysocket.close()
