@@ -1,0 +1,24 @@
+import urllib
+from bs4 import *
+
+address=str(raw_input('Enter URL:' ) or 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/known_by_Makaila.html')
+count=int(raw_input('Enter count:') or '7') 
+position=int(raw_input('Enter position:') or '18')
+check_time=0
+print 'Retrieving:',address
+
+while check_time<count:
+	url = address
+	check_position=0
+	html = urllib.urlopen(url).read()
+	soup = BeautifulSoup(html,'html.parser')
+	tags = soup('a')
+
+	for tag in tags:
+		check_position += 1
+		if check_position==position:
+			address = str(tag.get('href',None))
+			print 'Retrieving:',address;
+			check_time += 1
+			break
+
