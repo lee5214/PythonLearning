@@ -1,0 +1,19 @@
+import urllib
+import xml.etree.ElementTree as ET
+
+#url=str(raw_input('Enter location:') or 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_42.xml')
+url='http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_42.xml'
+data=urllib.urlopen(url).read()
+print 'Retrieving',url
+print 'Retrieved',len(data),'characters'
+
+tree=ET.fromstring(data)
+list=tree.findall('comments/comment')
+count=0
+sum=0
+for item in list:
+    count += 1
+    sum += int(item.find('count').text)
+print 'Count:',count
+print 'Sum:',sum
+
