@@ -1,0 +1,15 @@
+import urllib
+import json
+
+url =raw_input('Enter location:') or 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_185666.json'
+print 'Retrieving',url
+data=urllib.urlopen(url).read()
+print len(data)
+data=json.loads(data)
+sum=0
+count=0
+for item in data['comments']:
+    sum += item['count']
+    count += 1
+print 'Count:',count
+print 'Sum:',sum
