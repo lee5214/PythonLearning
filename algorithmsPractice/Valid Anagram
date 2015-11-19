@@ -1,0 +1,21 @@
+str1='a'
+str2='aa'
+class Anagram(object):
+    def check(self,str1,str2):
+        dic={}
+        for n in str1:
+            if n not in dic: 
+                dic[n]=1
+            else: 
+                dic[n]+=1
+        for n in str2:
+            if n not in dic:
+                return False
+            else:
+                dic[n]-=1
+        for n in dic:
+            if dic[n]!=0:
+                return False
+        return True
+p=Anagram()
+print p.check(str1,str2)
