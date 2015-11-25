@@ -5,7 +5,7 @@ class Solution:
         if head == None or head.next == None:
             return head
         p = head
-        while p.next:
+        while p.next:#care iff out of index
             if p.val == p.next.val:
                 p.next = p.next.next
             else:
